@@ -101,7 +101,7 @@ for epoch in range(num_epochs):
     if use_wandb:
         wandb.log({"train_acc": total_corrects / total_samples})
 
-    print(f"Epoch: {idx+1}/{num_epochs}")
+    print(f"Epoch: {epoch+1}/{num_epochs}")
     print()
     print(f"Training loss: {total_loss/total_samples}")
     print(f"Training acc: {total_corrects/total_samples}")
@@ -141,7 +141,6 @@ for epoch in range(num_epochs):
 
             if use_wandb:
                 wandb.log({"val_loss": loss})
-            print(f"Validation loss: {loss}")
 
         if use_wandb:
             wandb.log({"val_acc": total_corrects / total_samples})
